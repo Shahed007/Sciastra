@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import {Container } from "@mui/material";
 import heroVideo from "../../assets/video/rocketNew.mp4";
 const Hero = () => {
   return (

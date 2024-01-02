@@ -4,23 +4,12 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useState } from "react";
-import {
-  AccordionDetails,
-  AccordionSummary,
-  Container,
-  Menu,
-  MenuItem,
-  Popover,
-} from "@mui/material";
+import { AccordionDetails, AccordionSummary, Container } from "@mui/material";
 import logo from "../../assets/logo/sciastra.webp";
 import Accordion from "@mui/material/Accordion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -50,7 +39,18 @@ function Navbar(props) {
       >
         {/* Your drawer content goes here */}
         <div className="w-[240px] p-4">
-          <Accordion sx={{ mb: "14px" }}>
+          <Box
+            textAlign="center"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mb: '1rem'
+            }}
+          >
+            <img height={10} width={50} src={logo} alt="" />
+          </Box>
+          <Divider></Divider>
+          <Accordion sx={{ my: "14px" }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel-content"
