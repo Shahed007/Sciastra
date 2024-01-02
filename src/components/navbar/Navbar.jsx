@@ -13,23 +13,21 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useState } from "react";
-import { Container, Menu, MenuItem, Popover } from "@mui/material";
+import {
+  AccordionDetails,
+  AccordionSummary,
+  Container,
+  Menu,
+  MenuItem,
+  Popover,
+} from "@mui/material";
 import logo from "../../assets/logo/sciastra.webp";
+import Accordion from "@mui/material/Accordion";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const drawerWidth = 240;
 
 function Navbar(props) {
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleMenuEnter = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuLeave = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
   const researchInstitutes = ["IISC", "IISER", "NISER", "ISI", "CMI"];
   const ourTeam = ["Mission", "Team", "Book a session"];
   const resource = ["Blogs", "Material", "Web Stories", "Alumni Login"];
@@ -52,7 +50,129 @@ function Navbar(props) {
       >
         {/* Your drawer content goes here */}
         <div className="w-[240px] p-4">
-          <p>This is your drawer content.</p>
+          <Accordion sx={{ mb: "14px" }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel-content"
+              id="panel-header"
+            >
+              <Typography
+                variant="body2"
+                className="cursor-pointer  font-medium "
+              >
+                Research Institutes
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              {researchInstitutes.map((item, idx) => (
+                <Typography key={idx} sx={{ mb: "14px" }}>
+                  {item}
+                </Typography>
+              ))}
+            </AccordionDetails>
+          </Accordion>
+
+          <Button
+            variant="outline"
+            sx={{
+              width: "100%",
+              display: "block",
+              textAlign: "left",
+              border: "1px solid rgba(0,0,0, .1)",
+              mb: "14px",
+              py: "10px",
+              boxShadow: "1px 1px 1px rgba(0,0,0, .1)",
+              textTransform: "capitalize",
+              fontWeight: "400",
+            }}
+          >
+            Course
+          </Button>
+          <Button
+            variant="outline"
+            sx={{
+              width: "100%",
+              display: "block",
+              textAlign: "left",
+              border: "1px solid rgba(0,0,0, .1)",
+              mb: "14px",
+              py: "10px",
+              boxShadow: "1px 1px 1px rgba(0,0,0, .1)",
+              textTransform: "capitalize",
+              fontWeight: "400",
+            }}
+          >
+            Selections
+          </Button>
+          <Accordion sx={{ mb: "14px" }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel-content"
+              id="panel-header"
+            >
+              <Typography
+                variant="body2"
+                className="cursor-pointer  font-medium "
+              >
+                Our Team
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              {ourTeam.map((item, idx) => (
+                <Typography key={idx} sx={{ mb: "14px" }}>
+                  {item}
+                </Typography>
+              ))}
+            </AccordionDetails>
+          </Accordion>
+          <Accordion sx={{ mb: "14px" }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel-content"
+              id="panel-header"
+            >
+              <Typography
+                variant="body2"
+                className="cursor-pointer  font-medium "
+              >
+                Resource
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              {resource.map((item, idx) => (
+                <Typography key={idx} sx={{ mb: "14px" }}>
+                  {item}
+                </Typography>
+              ))}
+            </AccordionDetails>
+          </Accordion>
+          <Button
+            variant="outline"
+            sx={{
+              width: "100%",
+              display: "block",
+              textAlign: "left",
+              border: "1px solid rgba(0,0,0, .1)",
+              mb: "14px",
+              py: "10px",
+              boxShadow: "1px 1px 1px rgba(0,0,0, .1)",
+              textTransform: "capitalize",
+              fontWeight: "400",
+            }}
+          >
+            Contact Us
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              background: "linear-gradient(to left, #344FB6 , #A355DC )",
+              px: "2rem",
+              py: "10px",
+              borderRadius: "20rem",
+            }}
+          >
+            Login
+          </Button>
         </div>
       </Drawer>
     </>
