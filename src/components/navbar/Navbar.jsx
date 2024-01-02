@@ -13,13 +13,27 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useState } from "react";
-import { Container } from "@mui/material";
+import { Container, Menu, MenuItem, Popover } from "@mui/material";
 import logo from "../../assets/logo/sciastra.webp";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
 
 function Navbar(props) {
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleMenuEnter = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuLeave = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const researchInstitutes = ["IISC", "IISER", "NISER", "ISI", "CMI"];
+  const ourTeam = ["Mission", "Team", "Book a session"];
+  const resource = ["Blogs", "Material", "Web Stories", "Alumni Login"];
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -50,7 +64,7 @@ function Navbar(props) {
   return (
     <Box sx={{ display: "flex" }} position={"fixed"} zIndex={200}>
       <AppBar
-        elevation="none"
+        elevation={0}
         component="nav"
         sx={{
           color: "white",
@@ -87,21 +101,60 @@ function Navbar(props) {
                 gap: "24px",
               }}
             >
-              <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
-                Research Institutes
-              </button>
+              <div className="relative group menu">
+                <button className="px-4 py-1 dropdown  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
+                  Research Institutes
+                </button>
+                <ul className=" w-full absolute top-8 left-0 hidden dropdown-menu">
+                  {researchInstitutes.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="bg-white/30 backdrop-blur-md cursor-pointer p-3 py-4 hover:bg-transparent duration-200 text-center uppercase font-normal"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
                 Course
               </button>
               <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
                 Selections
               </button>
-              <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
-                Our Team
-              </button>
-              <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
-                Resources
-              </button>
+
+              <div className="relative group menu">
+                <button className="px-4 py-1 dropdown  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
+                  Our Team
+                </button>
+                <ul className="  absolute top-8 left-0 hidden dropdown-menu w-52">
+                  {ourTeam.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="bg-white/30 backdrop-blur-md cursor-pointer p-3 py-4 hover:bg-transparent duration-200 text-center uppercase font-normal"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative group menu">
+                <button className="px-4 py-1 dropdown  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
+                  Resource
+                </button>
+                <ul className="  absolute top-8 left-0 hidden dropdown-menu w-52">
+                  {resource.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="bg-white/30 backdrop-blur-md cursor-pointer p-3 py-4 hover:bg-transparent duration-200 text-center uppercase font-normal"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
                 Contact Us
               </button>
