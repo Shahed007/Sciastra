@@ -28,21 +28,20 @@ function Navbar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
+    <>
+      <Drawer
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        anchor="left"
+        variant="temporary"
+        sx={{ width: "120%", display: "block" }}
+      >
+        {/* Your drawer content goes here */}
+        <div className="w-[240px] p-4">
+          <p>This is your drawer content.</p>
+        </div>
+      </Drawer>
+    </>
   );
 
   const container =
@@ -59,7 +58,7 @@ function Navbar(props) {
           // py: "1rem",
         }}
       >
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
           <Toolbar
             sx={{
               display: "flex",
@@ -68,19 +67,7 @@ function Navbar(props) {
               color: "white",
             }}
           >
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              component="div"
-              sx={{ display: { xs: "none", sm: "block" } }}
-            >
+            <Typography component="div">
               <img
                 style={{
                   height: "50px",
@@ -89,24 +76,62 @@ function Navbar(props) {
                 alt="logo"
               />
             </Typography>
+
             <Box
               sx={{
                 display: {
                   xs: "none",
-                  sm: "block",
-                  margin: "0 auto",
-                  color: "#fff",
+                  lg: "flex",
                 },
+                color: "#fff",
+                gap: "24px",
               }}
             >
-              {navItems.map((item) => (
-                <Button style={{ color: "white" }} key={item}>
-                  {item}
-                </Button>
-              ))}
+              <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
+                Research Institutes
+              </button>
+              <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
+                Course
+              </button>
+              <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
+                Selections
+              </button>
+              <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
+                Our Team
+              </button>
+              <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
+                Resources
+              </button>
+              <button className="px-4 py-1  uppercase font-normal duration-200 hover:bg-white/30 hover:backdrop-blur-md hover:rounded-md hover:scale-105">
+                Contact Us
+              </button>
             </Box>
             <Box>
-              <Button>Login</Button>
+              <Button
+                variant="contained"
+                sx={{
+                  background: "linear-gradient(to left, #344FB6 , #A355DC )",
+                  px: "2rem",
+                  py: "10px",
+
+                  borderRadius: "20rem",
+                  display: {
+                    xs: "none",
+                    lg: "flex",
+                  },
+                }}
+              >
+                Login
+              </Button>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { lg: "none" } }}
+              >
+                <MenuIcon />
+              </IconButton>
             </Box>
           </Toolbar>
         </Container>
