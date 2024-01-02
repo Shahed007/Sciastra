@@ -49,14 +49,14 @@ function Navbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }} position={"fixed"}>
+    <Box sx={{ display: "flex" }} position={"fixed"} zIndex={200}>
       <AppBar
         elevation="none"
         component="nav"
         sx={{
-          color: "black",
+          color: "white",
           backgroundColor: "transparent",
-          py: "1rem",
+          // py: "1rem",
         }}
       >
         <Container maxWidth="lg">
@@ -65,6 +65,7 @@ function Navbar(props) {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
+              color: "white",
             }}
           >
             <IconButton
@@ -89,10 +90,19 @@ function Navbar(props) {
               />
             </Typography>
             <Box
-              sx={{ display: { xs: "none", sm: "block", margin: "0 auto" } }}
+              sx={{
+                display: {
+                  xs: "none",
+                  sm: "block",
+                  margin: "0 auto",
+                  color: "#fff",
+                },
+              }}
             >
               {navItems.map((item) => (
-                <Button key={item}>{item}</Button>
+                <Button style={{ color: "white" }} key={item}>
+                  {item}
+                </Button>
               ))}
             </Box>
             <Box>
