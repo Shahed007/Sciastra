@@ -1,3 +1,4 @@
+import ChatBot from "./components/chat/ChatBot";
 import Navbar from "./components/navbar/Navbar";
 import AtSciAstra from "./ui/atSciAstra/AtSciAstra";
 import Congratulations from "./ui/congratulations/Congratulations";
@@ -16,6 +17,7 @@ function App() {
       <ShorovGanguli></ShorovGanguli>
       <AtSciAstra></AtSciAstra>
       <Congratulations></Congratulations>
+      <ChatBot></ChatBot>
     </>
   );
 }
