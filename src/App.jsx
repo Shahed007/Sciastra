@@ -6,6 +6,7 @@ import Hero from "./ui/hero/Hero";
 import MoreOption from "./ui/moreOption/MoreOption";
 import Offer from "./ui/offer/Offer";
 import ShorovGanguli from "./ui/shorovGanguli/ShorovGanguli";
+import Successful from "./ui/successful/Successful";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <ShorovGanguli></ShorovGanguli>
       <AtSciAstra></AtSciAstra>
       <Congratulations></Congratulations>
+      <Successful></Successful>
       <ChatBot></ChatBot>
     </>
   );
