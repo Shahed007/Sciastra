@@ -2,6 +2,7 @@ import ChatBot from "./components/chat/ChatBot";
 import Navbar from "./components/navbar/Navbar";
 import AtSciAstra from "./ui/atSciAstra/AtSciAstra";
 import Congratulations from "./ui/congratulations/Congratulations";
+import Counter from "./ui/counter/Counter";
 import Hero from "./ui/hero/Hero";
 import MoreOption from "./ui/moreOption/MoreOption";
 import Offer from "./ui/offer/Offer";
@@ -19,6 +20,7 @@ function App() {
       <AtSciAstra></AtSciAstra>
       <Congratulations></Congratulations>
       <Successful></Successful>
+      <Counter></Counter>
       <ChatBot></ChatBot>
     </>
   );

@@ -9,8 +9,7 @@ const Successful = () => {
     <section className="my-20">
       <Container maxWidth="lg">
         <Swiper
-          slidesPerView={3}
-          spaceBetween={10}
+          slidesPerView={1}
           pagination={{
             clickable: true,
           }}
@@ -20,6 +19,16 @@ const Successful = () => {
           }}
           navigation={true}
           modules={[Navigation, Pagination, Autoplay]}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
           className="mb-10 pb-10"
         >
           <SwiperSlide className="mb-5">
@@ -53,7 +62,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "3rem", xs: "2rem" },
+                      fontSize: { md: "3rem", xs: "1.6rem" },
                     }}
                   >
                     AIR
@@ -68,7 +77,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "4rem", xs: "3rem" },
+                      fontSize: { md: "4rem", xs: "1.8rem" },
                       fontFamily: "serif",
                     }}
                   >
@@ -123,7 +132,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "3rem", xs: "2rem" },
+                      fontSize: { md: "3rem", xs: "1.6rem" },
                     }}
                   >
                     AIR
@@ -138,7 +147,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "4rem", xs: "3rem" },
+                      fontSize: { md: "4rem", xs: "1.8rem" },
                       fontFamily: "serif",
                     }}
                   >
@@ -193,7 +202,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "3rem", xs: "2rem" },
+                      fontSize: { md: "3rem", xs: "1.6rem" },
                     }}
                   >
                     AIR
@@ -208,7 +217,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "4rem", xs: "3rem" },
+                      fontSize: { md: "4rem", xs: "1.8rem" },
                       fontFamily: "serif",
                     }}
                   >
@@ -263,7 +272,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "3rem", xs: "2rem" },
+                      fontSize: { md: "3rem", xs: "1.6rem" },
                     }}
                   >
                     AIR
@@ -278,7 +287,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "4rem", xs: "3rem" },
+                      fontSize: { md: "4rem", xs: "1.8rem" },
                       fontFamily: "serif",
                     }}
                   >
@@ -333,7 +342,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "3rem", xs: "2rem" },
+                      fontSize: { md: "3rem", xs: "1.6rem" },
                     }}
                   >
                     AIR
@@ -348,7 +357,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "4rem", xs: "3rem" },
+                      fontSize: { md: "4rem", xs: "1.8rem" },
                       fontFamily: "serif",
                     }}
                   >
@@ -403,7 +412,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "3rem", xs: "2rem" },
+                      fontSize: { md: "3rem", xs: "1.6rem" },
                     }}
                   >
                     AIR
@@ -418,7 +427,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "4rem", xs: "3rem" },
+                      fontSize: { md: "4rem", xs: "1.8rem" },
                       fontFamily: "serif",
                     }}
                   >
@@ -473,7 +482,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "3rem", xs: "2rem" },
+                      fontSize: { md: "3rem", xs: "1.6rem" },
                     }}
                   >
                     AIR
@@ -488,7 +497,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "4rem", xs: "3rem" },
+                      fontSize: { md: "4rem", xs: "1.8rem" },
                       fontFamily: "serif",
                     }}
                   >
@@ -503,7 +512,7 @@ const Successful = () => {
                       color: "transparent",
                       textAlign: "center",
                       fontWeight: "700",
-                      fontSize: { md: "1.4rem", xs: "2rem" },
+                      fontSize: { md: "2rem", xs: "1.4rem" },
                     }}
                   >
                     IAT 2023
