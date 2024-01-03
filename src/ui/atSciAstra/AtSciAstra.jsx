@@ -1,16 +1,16 @@
 import { Container, Grid, Typography } from "@mui/material";
 
-const ShorovGanguli = () => {
+const AtSciAstra = () => {
   return (
     <section className="my-20">
       <Container maxWidth="lg">
-        <Grid container alignItems="center" spacing={2}>
-          <Grid item xs={12} md={6}>
-            <video className="rounded-md" controls autoPlay loop muted>
-              <source src="https://www.sciastra.com/Assets/newAssets/Sourav-Goungly-outro-new-logo.mp4"></source>
+        <Grid container spacing={2} alignItems="center">
+          <Grid item sx={12} md={6}>
+            <video controls autoPlay loop muted>
+              <source src="https://www.sciastra.com/Assets/newAssets/Top-Indian%20Institutes-without%20JEE-&-NEET-%20ZERO-Fee-4-Lakhs-Scholarship.mp4"></source>
             </video>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item sx={12} md={6}>
             <div>
               <Typography
                 variant="h3"
@@ -28,7 +28,7 @@ const ShorovGanguli = () => {
                   color: "transparent",
                 }}
               >
-                Sourav Ganguly&apos;s Message
+                At SciAstra
               </Typography>
             </div>
             <Typography
@@ -43,8 +43,8 @@ const ShorovGanguli = () => {
                 textAlign: { xs: "center", md: "right" },
               }}
             >
-              A good teacher is like a candle, it consumes itself to light the
-              way for others.
+              we make students love science & prepare all 4 subjects- PCMB. You
+              can crack IAT, NEST, JEE, NEET, Boards & so on.
             </Typography>
           </Grid>
         </Grid>
@@ -53,4 +53,4 @@ const ShorovGanguli = () => {
   );
 };
 
-export default ShorovGanguli;
+export default AtSciAstra;
