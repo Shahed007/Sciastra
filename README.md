@@ -1,8 +1,20 @@
-# React + Vite
+# Sci Astra
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔗 Links
+Live webiste link :
+[Sci Astra](https://tangerine-granita-26feaa.netlify.app)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation 
+
+
+```bash
+ open cmd
+ git clone https://github.com/Shahed007/Sciastra
+ cd gadget-grid-client
+ npm install 
+ npm run dev
+```
+
+- I am used to build chat bot with botpress. you see this on bottom of the website.
+

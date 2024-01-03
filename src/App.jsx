@@ -1,3 +1,4 @@
+
 import ChatBot from "./components/chat/ChatBot";
 import Navbar from "./components/navbar/Navbar";
 import AtSciAstra from "./ui/atSciAstra/AtSciAstra";
@@ -10,6 +11,7 @@ import ShorovGanguli from "./ui/shorovGanguli/ShorovGanguli";
 import Successful from "./ui/successful/Successful";
 
 function App() {
+  
   return (
     <>
       <Navbar></Navbar>

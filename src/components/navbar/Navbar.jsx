@@ -8,7 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AccordionDetails, AccordionSummary, Container } from "@mui/material";
 import logo from "../../assets/logo/sciastra.webp";
 import Accordion from "@mui/material/Accordion";
@@ -44,7 +44,7 @@ function Navbar(props) {
             sx={{
               display: "flex",
               justifyContent: "center",
-              mb: '1rem'
+              mb: "1rem",
             }}
           >
             <img height={10} width={50} src={logo} alt="" />
@@ -188,8 +188,8 @@ function Navbar(props) {
         component="nav"
         sx={{
           color: "white",
-          backgroundColor: "transparent",
           // py: "1rem",
+          background: "rgba(0,0,0,.5)",
         }}
       >
         <Container maxWidth="xl">
@@ -229,7 +229,7 @@ function Navbar(props) {
                   {researchInstitutes.map((item, idx) => (
                     <li
                       key={idx}
-                      className="bg-white/30 backdrop-blur-md cursor-pointer p-3 py-4 hover:bg-transparent duration-200 text-center uppercase font-normal"
+                      className="bg-gray-700/30 backdrop-blur-md cursor-pointer p-3 py-4 hover:bg-transparent duration-200 text-center uppercase font-normal"
                     >
                       {item}
                     </li>
@@ -252,7 +252,7 @@ function Navbar(props) {
                   {ourTeam.map((item, idx) => (
                     <li
                       key={idx}
-                      className="bg-white/30 backdrop-blur-md cursor-pointer p-3 py-4 hover:bg-transparent duration-200 text-center uppercase font-normal"
+                      className="bg-gray-700/30 backdrop-blur-md cursor-pointer p-3 py-4 hover:bg-transparent duration-200 text-center uppercase font-normal"
                     >
                       {item}
                     </li>
@@ -268,7 +268,7 @@ function Navbar(props) {
                   {resource.map((item, idx) => (
                     <li
                       key={idx}
-                      className="bg-white/30 backdrop-blur-md cursor-pointer p-3 py-4 hover:bg-transparent duration-200 text-center uppercase font-normal"
+                      className="bg-gray-700/30 backdrop-blur-md cursor-pointer p-3 py-4 hover:bg-transparent duration-200 text-center uppercase font-normal"
                     >
                       {item}
                     </li>
